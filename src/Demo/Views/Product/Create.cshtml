@@ -1,1 +1,25 @@
+﻿@model CreateProductViewModel
 
+<h1>Create New Product</h1>
+
+<form asp-controller="Product" asp-action="Create" method="post" role="form">
+    <div>
+        <label asp-for="Name">Name:</label>
+        <input asp-for="Name" />
+    </div>
+    <div>
+        <label asp-for="Details">Details:</label>
+        <input asp-for="Details"/>
+    </div>
+    <div>
+        <label asp-for="Price">Price:</label>
+        <input asp-for="Price" />
+    </div>
+    <div>
+        <label asp-for="CategoryId">CategoryId:</label>
+        <input asp-for="CategoryId" />
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+</form>
