@@ -1,0 +1,16 @@
+﻿@model DisplayAllCategoriesViewModel
+
+<h1>Categories</h1>
+
+<table>
+    @foreach (var item in Model.Categories)
+    {
+        <tr>
+            <td>@item.CategoryId</td>
+            <td>@item.Name</td>
+            <td><a asp-controller="Home" asp-action="Display" asp-route-id="@item.CategoryId">Display</a></td>
+        </tr>
+    }
+</table>
+
+<a asp-controller="Home" asp-action="Create">Create Category</a>

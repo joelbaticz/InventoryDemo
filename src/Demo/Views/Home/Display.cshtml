@@ -1,0 +1,23 @@
+﻿@model DisplayCategoryViewModel
+
+<h1>Category @Model.CatId - @Model.CatName</h1>
+<p>Description: @Model.Description</p>
+
+<table>
+    @foreach (var item in Model.CatProducts)
+    {
+        <tr>
+            <td>@item.ProductId</td>            
+            <td>@item.Name</td>            
+            <td>@item.Price</td>            
+        </tr>
+    }
+</table>
+
+<!--<a asp-controller="Product" asp-action="Create" asp-route-id="@Model.CatId">Create Product</a>
+    -->
+
+<!--@Html.ActionLink("Create Product", "Create", "Product", new { catId = Model.CatId })
+    -->
+
+<a asp-controller="Product" asp-action="Create" asp-route-id="@Model.CatId">Create product</a>
